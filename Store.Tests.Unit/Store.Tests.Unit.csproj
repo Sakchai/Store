@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\Solution.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include=".Framework\Builders\AddressBuilder.cs" />
+    <Compile Include=".Framework\Builders\Builder.cs" />
+    <Compile Include=".Framework\Builders\Builders.cs" />
+    <Compile Include=".Framework\Builders\CategoryBuilder.cs" />
+    <Compile Include=".Framework\Builders\CountryBuilder.cs" />
+    <Compile Include=".Framework\Builders\StateBuilder.cs" />
+    <Compile Include=".Framework\GetRandom.cs" />
+    <Compile Include=".Framework\GetRandomTests.cs" />
+    <Compile Include=".Framework\Mothers\AddressMother.cs" />
+    <Compile Include=".Framework\Mothers\CategoryMother.cs" />
+    <Compile Include=".Framework\Mothers\CountryMother.cs" />
+    <Compile Include=".Framework\Mothers\OrderItemMother.cs" />
+    <Compile Include=".Framework\Mothers\OrderMother.cs" />
+    <Compile Include=".Framework\Mothers\ProductMother.cs" />
+    <Compile Include=".Framework\Mothers\ProductStatusMother.cs" />
+    <Compile Include=".Framework\Mothers\StateMother.cs" />
+    <Compile Include=".Framework\Mothers\UserMother.cs" />
+    <Compile Include=".Framework\SpecsForService.cs" />
+    <Compile Include=".Framework\SpecsForRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.2" />
+    <PackageReference Include="nunit" Version="3.11.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.11.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="Scripty.MsBuild" Version="0.7.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Shouldly" Version="3.0.2" />
+    <PackageReference Include="SpecsFor" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CommonTests\" />
+    <Folder Include="WebTests\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".Framework\Builders\Builders.csx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Store.Domain\Store.Domain.csproj" />
+    <ProjectReference Include="..\Store.Services\Store.Services.csproj" />
+  </ItemGroup>
+
+</Project>
